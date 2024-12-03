@@ -1,31 +1,38 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #d6a8ff, #ffffff);
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d6a8ff, #ffffff);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background 0.5s ease;
   }
   
   /* Container do Login */
   .login-container {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     text-align: center;
+    transition: transform 0.3s ease;
   }
   
-  .login-container h1 {
+  .login-container:hover {
+    transform: translateY(-5px); /* Leve efeito de elevação */
+  }
+  
+  h1 {
     margin-bottom: 10px;
     color: #333;
+    font-size: 28px;
   }
   
   .welcome-message {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 16px;
     color: #666;
   }
@@ -36,46 +43,59 @@ body {
     flex-direction: column;
   }
   
-  label {
+  .input-group {
+    margin-bottom: 20px;
     text-align: left;
+  }
+  
+  label {
     margin-bottom: 5px;
     font-size: 14px;
     color: #555;
   }
   
   input {
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
+    width: 100%;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
   }
   
-  /* Botão */
+  input:focus {
+    border-color: #7d5ba6; /* Borda de foco mais destacada */
+    outline: none;
+  }
+  
   button {
-    padding: 10px;
+    padding: 12px;
     background-color: #7d5ba6;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   button:hover {
     background-color: #6a4793;
+    transform: scale(1.05); /* Efeito de zoom */
   }
   
   /* Links adicionais */
   .options a {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     text-decoration: none;
     color: #7d5ba6;
     font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
   }
   
   .options a:hover {
+    color: #6a4793;
     text-decoration: underline;
   }
-  

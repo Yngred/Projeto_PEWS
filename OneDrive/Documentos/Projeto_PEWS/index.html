@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,27 @@
 </head>
 <body>
   <div class="login-container">
-    <!-- Novo texto de boas-vindas -->
+      <!-- Continua o mesmo texto de boas vindas -->
     <h1>Bem-vindo ao PEWS</h1>
     <p class="welcome-message">Faça login ou cadastre-se</p>
     
     <form action="/login" method="POST">
       <!-- Campo de Email -->
-      <label for="email">E-mail</label>
-      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      </div>
+      
       <!-- Campo de Senha -->
-      <label for="password">Senha</label>
-      <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+      </div>
+      
       <!-- Botão de Login -->
       <button type="submit">Entrar</button>
     </form>
-
+    
     <!-- Opções adicionais -->
     <div class="options">
       <a href="/forgot-password">Esqueci minha senha</a>
